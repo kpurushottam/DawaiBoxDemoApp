@@ -7,11 +7,11 @@ import android.widget.TextView;
 /**
  * Created by Surati on 11/1/2016.
  */
-public class DrugDetialsViewHolder extends RecyclerView.ViewHolder {
+public class DrugTitleViewHolder extends RecyclerView.ViewHolder {
 
     private TextView tvText1;
 
-    public DrugDetialsViewHolder(View itemView) {
+    public DrugTitleViewHolder(View itemView) {
         super(itemView);
 
         tvText1 = (TextView) itemView.findViewById(android.R.id.text1);

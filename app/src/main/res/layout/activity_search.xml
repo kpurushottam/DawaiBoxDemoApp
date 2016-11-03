@@ -9,21 +9,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
-
-
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTv"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
-            android:ems="10"
-            android:text="">
+            android:orientation="horizontal">
 
-            <requestFocus />
-        </AutoCompleteTextView>
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <requestFocus />
+            </AutoCompleteTextView>
+
+            <ImageView
+                android:id="@+id/iv_prev_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@android:drawable/arrow_down_float"/>
+        </LinearLayout>
     </android.support.design.widget.AppBarLayout>
 
 
@@ -31,6 +40,16 @@
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_suggestions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/darker_gray"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </android.support.design.widget.CoordinatorLayout>

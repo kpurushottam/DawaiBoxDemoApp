@@ -1,9 +1,11 @@
 package com.krp.android.demoapp.modals;
 
+import com.krp.android.demoapp.utils.DrugDetailsAdapter;
+
 /**
  * Created by Surati on 11/1/2016.
  */
-public class Drug {
+public class Drug implements Cloneable {
     private long drugId;            //44332
     private String drugName;        //Nimkul Para 100,500mg
     private String drugType;        //Tablet
@@ -13,11 +15,18 @@ public class Drug {
     private String drugIndications;
     private String drugContraIndications;
 
+    private int viewType = DrugDetailsAdapter.TYPE_TITLE;
+
 
     public Drug() {}
 
     public Drug(String drugName) {
         this.drugName = drugName;
+    }
+
+    public Drug(String drugName, int viewType) {
+        this.drugName = drugName;
+        this.viewType = viewType;
     }
 
 
@@ -54,6 +63,18 @@ public class Drug {
         return drugContraIndications;
     }
 
+    public int getViewType() {
+        return viewType;
+    }
+
+    public void setViewType(int viewType) {
+        this.viewType = viewType;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
     @Override
     public String toString() {
