@@ -18,7 +18,10 @@
                 android:id="@+id/autoCompleteTv"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:hint="@string/hint_search_drug">
 
                 <requestFocus />
             </AutoCompleteTextView>
@@ -40,6 +43,8 @@
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
@@ -49,6 +54,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
         android:background="@android:color/darker_gray"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 

@@ -27,20 +27,24 @@
     <TextView
         android:id="@+id/tv_compound"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"/>
 
     <TextView
         android:id="@+id/tv_interaction"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10" />
 
     <TextView
         android:id="@+id/tv_indication"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10" />
 
     <TextView
         android:id="@+id/tv_contra_indication"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10" />
 </LinearLayout>

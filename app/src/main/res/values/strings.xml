@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">DemoApp</string>
+    <string name="app_name">DawaiBoxDemoApp</string>
+
+    <!-- Login page -->
+    <string name="hint_user">username</string>
+    <string name="hint_password">password</string>
+    <string name="hint_cnf_password">confirm password</string>
+    <string name="hint_search_drug">search your drugs here</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+
+    <!-- welcome page -->
+    <string name="hint_welcome">Welcome</string>
+
+    <!-- error messages -->
+    <string name="error_user_not_registered">User not registered. Click on register!!</string>
+    <string name="error_invalid_user">Invalid username!!</string>
+    <string name="error_invalid_pwd">Invalid password!!</string>
+    <string name="error_invalid_cnf_pwd">Please confirm password again!!</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
 </resources>

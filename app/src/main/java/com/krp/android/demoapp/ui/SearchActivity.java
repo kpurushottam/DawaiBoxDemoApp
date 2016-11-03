@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
@@ -32,6 +33,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SearchActivity extends AppCompatActivity implements TextWatcher {
+
+    private final String TAG = SearchActivity.class.getSimpleName();
 
     private final long DAWAI_BOX_SEARCH_DRUGS_ID = 14120;
     private final String DAWAI_BOX_SEARCH_DRUGS_ROLE = "Doctor";
@@ -214,7 +217,7 @@ public class SearchActivity extends AppCompatActivity implements TextWatcher {
 
         @Override
         public void onFailure(Call<GetDrugsApiResponse> call, Throwable t) {
-
+            Log.e(TAG, "Unable to fetch drugList");
         }
     };
 
@@ -237,7 +240,7 @@ public class SearchActivity extends AppCompatActivity implements TextWatcher {
 
         @Override
         public void onFailure(Call<GetDrugsApiResponse> call, Throwable t) {
-
+            Log.e(TAG, "Unable to fetch drugList");
         }
     };
 }
